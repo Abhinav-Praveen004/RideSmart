@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compare Bikes - RideSmart</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Compare Motorcycles</h1>
+            <a href="/" class="btn btn-secondary">Back to Home</a>
+        </header>
+        
+        <main>
+            <div class="search-section">
+                <div class="search-box">
+                    <h3>Select First Bike</h3>
+                    <input type="text" id="search1" placeholder="Search by brand or model..." autocomplete="off">
+                    <div id="results1" class="search-results"></div>
+                    <div id="selected1" class="selected-bike"></div>
+                </div>
+                
+                <div class="search-box">
+                    <h3>Select Second Bike</h3>
+                    <input type="text" id="search2" placeholder="Search by brand or model..." autocomplete="off">
+                    <div id="results2" class="search-results"></div>
+                    <div id="selected2" class="selected-bike"></div>
+                </div>
+            </div>
+            
+            <div id="comparison-table" class="comparison-section" style="display: none;">
+                <h2>Comparison Results</h2>
+                <table id="specs-table">
+                    <thead>
+                        <tr>
+                            <th>Specification</th>
+                            <th id="bike1-header"></th>
+                            <th id="bike2-header"></th>
+                        </tr>
+                    </thead>
+                    <tbody id="specs-body">
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+    
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
